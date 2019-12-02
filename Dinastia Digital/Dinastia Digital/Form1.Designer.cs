@@ -41,48 +41,49 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 31);
+            this.label1.Location = new System.Drawing.Point(24, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 24);
+            this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id:";
+            this.label1.Text = "Identificacion:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 80);
+            this.label2.Location = new System.Drawing.Point(24, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
             // TxtIdentificacion
             // 
-            this.TxtIdentificacion.Location = new System.Drawing.Point(172, 35);
+            this.TxtIdentificacion.Location = new System.Drawing.Point(180, 43);
             this.TxtIdentificacion.Name = "TxtIdentificacion";
             this.TxtIdentificacion.Size = new System.Drawing.Size(136, 20);
-            this.TxtIdentificacion.TabIndex = 2;
+            this.TxtIdentificacion.TabIndex = 1;
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(172, 83);
+            this.TxtPassword.Location = new System.Drawing.Point(180, 92);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(136, 20);
             this.TxtPassword.TabIndex = 3;
             // 
             // BtnAceptar
             // 
-            this.BtnAceptar.Location = new System.Drawing.Point(126, 166);
+            this.BtnAceptar.Location = new System.Drawing.Point(91, 139);
             this.BtnAceptar.Name = "BtnAceptar";
             this.BtnAceptar.Size = new System.Drawing.Size(81, 35);
             this.BtnAceptar.TabIndex = 4;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = true;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(227, 166);
+            this.BtnCancelar.Location = new System.Drawing.Point(192, 139);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(81, 35);
             this.BtnCancelar.TabIndex = 5;
@@ -93,7 +94,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(155, 232);
+            this.linkLabel1.Location = new System.Drawing.Point(120, 205);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(120, 13);
             this.linkLabel1.TabIndex = 6;
@@ -104,7 +105,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 303);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(353, 263);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAceptar);
@@ -112,10 +114,12 @@
             this.Controls.Add(this.TxtIdentificacion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Validar Usuario";
+            this.Text = "Inicio de Sesión";
             this.ResumeLayout(false);
             this.PerformLayout();
 
