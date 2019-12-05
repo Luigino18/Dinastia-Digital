@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dinastia_Digital
+namespace Dinastia_Digital.Models
 {
     using System;
     using System.Collections.Generic;
@@ -17,12 +17,11 @@ namespace Dinastia_Digital
         public string TipoIdentificacion { get; set; }
         public int Identificacion { get; set; }
         public string Nombres { get; set; }
-        public string Apellidos { get; set; }
         public string Password { get; set; }
         public string Correo { get; set; }
         public string Departamento { get; set; }
         public string Ciudad { get; set; }
         public string Cargo { get; set; }
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
     }
 }

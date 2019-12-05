@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dinastia_Digital
@@ -15,13 +8,19 @@ namespace Dinastia_Digital
         public AdminPrincipal(string nombre)
         {
             InitializeComponent();
-            LblAdmin.Text = nombre;
+            LblNombres.Text = nombre;
             //TxtApellidos.Text = apellidos;
         }
 
         private void AdminPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Usuario();
+            formulario.Show();
         }
     }
 }

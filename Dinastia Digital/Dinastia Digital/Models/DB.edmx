@@ -12,13 +12,12 @@
           <Property Name="TipoIdentificacion" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Identificacion" Type="int" Nullable="false" />
           <Property Name="Nombres" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Apellidos" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Correo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Departamento" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Ciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Cargo" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DinastiaModelStoreContainer">
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
@@ -35,15 +34,14 @@
           <Property Name="TipoIdentificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Identificacion" Type="Int32" Nullable="false" />
           <Property Name="Nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telefono" Type="Int32" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DinastiaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DinastiaEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
         </EntityContainer>
       </Schema>
@@ -51,14 +49,13 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities">
+        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities1">
           <EntitySetMapping Name="Usuarios">
             <EntityTypeMapping TypeName="DinastiaModel.Usuarios">
               <MappingFragment StoreEntitySet="Usuarios">
                 <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
                 <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
-                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Departamento" ColumnName="Departamento" />

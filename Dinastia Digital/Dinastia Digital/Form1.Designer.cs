@@ -120,6 +120,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,4 +137,3 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
-

@@ -28,132 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LblAdmin = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Usuario = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.Usuario.SuspendLayout();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LblNombres = new System.Windows.Forms.Label();
+            this.BtnUsuarios = new System.Windows.Forms.Button();
+            this.BtnProductos = new System.Windows.Forms.Button();
+            this.BtnAfiliados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(156, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(167, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Bienvenido";
             // 
-            // LblAdmin
+            // LblNombres
             // 
-            this.LblAdmin.AutoSize = true;
-            this.LblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAdmin.Location = new System.Drawing.Point(307, 9);
-            this.LblAdmin.Name = "LblAdmin";
-            this.LblAdmin.Size = new System.Drawing.Size(0, 24);
-            this.LblAdmin.TabIndex = 1;
+            this.LblNombres.AutoSize = true;
+            this.LblNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombres.Location = new System.Drawing.Point(288, 22);
+            this.LblNombres.Name = "LblNombres";
+            this.LblNombres.Size = new System.Drawing.Size(0, 24);
+            this.LblNombres.TabIndex = 1;
             // 
-            // label2
+            // BtnUsuarios
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "USUARIO";
+            this.BtnUsuarios.Location = new System.Drawing.Point(70, 91);
+            this.BtnUsuarios.Name = "BtnUsuarios";
+            this.BtnUsuarios.Size = new System.Drawing.Size(87, 31);
+            this.BtnUsuarios.TabIndex = 5;
+            this.BtnUsuarios.Text = "Usuario";
+            this.BtnUsuarios.UseVisualStyleBackColor = true;
+            this.BtnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
-            // Usuario
+            // BtnProductos
             // 
-            this.Usuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
-            this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(118, 48);
+            this.BtnProductos.Location = new System.Drawing.Point(292, 90);
+            this.BtnProductos.Name = "BtnProductos";
+            this.BtnProductos.Size = new System.Drawing.Size(87, 31);
+            this.BtnProductos.TabIndex = 6;
+            this.BtnProductos.Text = "Productos";
+            this.BtnProductos.UseVisualStyleBackColor = true;
             // 
-            // agregarToolStripMenuItem
+            // BtnAfiliados
             // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Agregar",
-            "Buscar",
-            "Eliminar",
-            "Ver Usuario"});
-            this.comboBox1.Location = new System.Drawing.Point(53, 118);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(223, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "PRODUCTOS";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(407, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "AFILIADOS";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Agregar",
-            "Buscar",
-            "Eliminar",
-            "Modificar",
-            "Ver Productos"});
-            this.comboBox2.Location = new System.Drawing.Point(227, 118);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
+            this.BtnAfiliados.Location = new System.Drawing.Point(511, 90);
+            this.BtnAfiliados.Name = "BtnAfiliados";
+            this.BtnAfiliados.Size = new System.Drawing.Size(109, 32);
+            this.BtnAfiliados.TabIndex = 7;
+            this.BtnAfiliados.Text = "Afiliados";
+            this.BtnAfiliados.UseVisualStyleBackColor = true;
             // 
             // AdminPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 380);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.LblAdmin);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(689, 381);
+            this.Controls.Add(this.BtnAfiliados);
+            this.Controls.Add(this.BtnProductos);
+            this.Controls.Add(this.BtnUsuarios);
+            this.Controls.Add(this.LblNombres);
+            this.Controls.Add(this.label5);
             this.Name = "AdminPrincipal";
-            this.Text = "AdminPrincipal";
-            this.Load += new System.EventHandler(this.AdminPrincipal_Load);
-            this.Usuario.ResumeLayout(false);
+            this.Text = "Administrador Principal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,15 +99,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LblAdmin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ContextMenuStrip Usuario;
-        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblNombres;
+        private System.Windows.Forms.Button BtnUsuarios;
+        private System.Windows.Forms.Button BtnProductos;
+        private System.Windows.Forms.Button BtnAfiliados;
     }
 }

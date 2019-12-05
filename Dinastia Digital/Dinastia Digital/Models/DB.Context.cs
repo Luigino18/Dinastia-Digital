@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dinastia_Digital
+namespace Dinastia_Digital.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DinastiaEntities : DbContext
+    public partial class DinastiaEntities1 : DbContext
     {
-        public DinastiaEntities()
-            : base("name=DinastiaEntities")
+        public DinastiaEntities1()
+            : base("name=DinastiaEntities1")
         {
         }
     

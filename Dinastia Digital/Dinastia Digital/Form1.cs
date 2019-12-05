@@ -81,5 +81,10 @@ namespace Dinastia_Digital
         {
             logear(this.TxtIdentificacion.Text, this.TxtPassword.Text);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
