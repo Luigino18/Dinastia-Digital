@@ -43,10 +43,10 @@
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.CbTipoIdentificacion = new System.Windows.Forms.ComboBox();
-            this.CbDepartamento = new System.Windows.Forms.ComboBox();
             this.CbCiudad = new System.Windows.Forms.ComboBox();
             this.CbCargo = new System.Windows.Forms.ComboBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
+            this.CbDepartamento = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -177,18 +177,6 @@
             this.CbTipoIdentificacion.Size = new System.Drawing.Size(121, 21);
             this.CbTipoIdentificacion.TabIndex = 14;
             // 
-            // CbDepartamento
-            // 
-            this.CbDepartamento.FormattingEnabled = true;
-            this.CbDepartamento.Items.AddRange(new object[] {
-            "C.C",
-            "C.E",
-            "T.I"});
-            this.CbDepartamento.Location = new System.Drawing.Point(265, 221);
-            this.CbDepartamento.Name = "CbDepartamento";
-            this.CbDepartamento.Size = new System.Drawing.Size(165, 21);
-            this.CbDepartamento.TabIndex = 15;
-            // 
             // CbCiudad
             // 
             this.CbCiudad.FormattingEnabled = true;
@@ -200,14 +188,15 @@
             this.CbCiudad.Name = "CbCiudad";
             this.CbCiudad.Size = new System.Drawing.Size(165, 21);
             this.CbCiudad.TabIndex = 16;
+            this.CbCiudad.SelectedIndexChanged += new System.EventHandler(this.Ciudad);
             // 
             // CbCargo
             // 
             this.CbCargo.FormattingEnabled = true;
             this.CbCargo.Items.AddRange(new object[] {
-            "C.C",
-            "C.E",
-            "T.I"});
+            "Ingeniero de Sistemas",
+            "Administrador",
+            "Vendedor"});
             this.CbCargo.Location = new System.Drawing.Point(265, 298);
             this.CbCargo.Name = "CbCargo";
             this.CbCargo.Size = new System.Drawing.Size(165, 21);
@@ -223,15 +212,27 @@
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
+            // CbDepartamento
+            // 
+            this.CbDepartamento.FormattingEnabled = true;
+            this.CbDepartamento.Items.AddRange(new object[] {
+            "C.C",
+            "C.E",
+            "T.I"});
+            this.CbDepartamento.Location = new System.Drawing.Point(265, 221);
+            this.CbDepartamento.Name = "CbDepartamento";
+            this.CbDepartamento.Size = new System.Drawing.Size(165, 21);
+            this.CbDepartamento.TabIndex = 19;
+            // 
             // FrmTablas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 450);
+            this.Controls.Add(this.CbDepartamento);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.CbCargo);
             this.Controls.Add(this.CbCiudad);
-            this.Controls.Add(this.CbDepartamento);
             this.Controls.Add(this.CbTipoIdentificacion);
             this.Controls.Add(this.TxtTelefono);
             this.Controls.Add(this.TxtCorreo);
@@ -272,9 +273,9 @@
         private System.Windows.Forms.TextBox TxtCorreo;
         private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.ComboBox CbTipoIdentificacion;
-        private System.Windows.Forms.ComboBox CbDepartamento;
         private System.Windows.Forms.ComboBox CbCiudad;
         private System.Windows.Forms.ComboBox CbCargo;
         private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.ComboBox CbDepartamento;
     }
 }

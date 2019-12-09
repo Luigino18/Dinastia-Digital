@@ -4,8 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="00ac80013b4043d181ad2bec9a830bba" Name="Diagram1">
-        <EntityTypeShape EntityType="DinastiaModel.Usuarios" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4ded0891f963451fbe78ebd9439eed9d" Name="Diagram1">
+        <EntityTypeShape EntityType="DinastiaModel.Ciudad" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinastiaModel.Departamentos" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DinastiaModel.Usuarios" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="DinastiaModel.FK_Ciudad_Ciudad" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

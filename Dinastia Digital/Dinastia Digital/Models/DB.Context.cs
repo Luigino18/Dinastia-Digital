@@ -13,10 +13,10 @@ namespace Dinastia_Digital.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DinastiaEntities1 : DbContext
+    public partial class DinastiaEntities2 : DbContext
     {
-        public DinastiaEntities1()
-            : base("name=DinastiaEntities1")
+        public DinastiaEntities2()
+            : base("name=DinastiaEntities2")
         {
         }
     
@@ -25,6 +25,8 @@ namespace Dinastia_Digital.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Ciudad> Ciudad { get; set; }
+        public virtual DbSet<Departamentos> Departamentos { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

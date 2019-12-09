@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dinastia_Digital.Models;
+using System.Data.SqlClient;
 
 namespace Dinastia_Digital.Presentation
 {
@@ -26,9 +27,11 @@ namespace Dinastia_Digital.Presentation
             }
         }
 
+        conexion con = new conexion();
+
         private void CargaDatos()
         {
-            using (DinastiaEntities1 db = new DinastiaEntities1())
+            using (DinastiaEntities2 db = new DinastiaEntities2())
             {
                 
                 oUsuarios = db.Usuarios.Find(Identificacion);
@@ -46,7 +49,7 @@ namespace Dinastia_Digital.Presentation
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            using (DinastiaEntities1 db = new DinastiaEntities1())
+            using (DinastiaEntities2 db = new DinastiaEntities2())
             {
                 if(Identificacion==null)
                 oUsuarios = new Usuarios();
@@ -74,6 +77,17 @@ namespace Dinastia_Digital.Presentation
         }
 
         private void FrmTablas_Load(object sender, EventArgs e)
+        {
+            CbDepartamento.DataSource = con.CargarCombo();
+            CbDepartamento.DisplayMember = "Departamento";
+            CbDepartamento.ValueMember = "IdDepartamento";
+        }
+
+        private void Ciudad(object sender, EventArgs e)
+        {
+        }
+
+        private void dropDepartamento(object sender, EventArgs e)
         {
 
         }

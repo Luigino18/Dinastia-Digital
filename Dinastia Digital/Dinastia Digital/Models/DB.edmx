@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DinastiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="idCiudad" />
+          </Key>
+          <Property Name="idCiudad" Type="int" Nullable="false" />
+          <Property Name="idDepartamento" Type="int" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departamentos">
+          <Key>
+            <PropertyRef Name="idDepartamento" />
+          </Key>
+          <Property Name="idDepartamento" Type="int" Nullable="false" />
+          <Property Name="Departamento" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="Identificacion" />
@@ -19,14 +34,49 @@
           <Property Name="Cargo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Telefono" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Ciudad_Ciudad">
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+          <End Role="Ciudad1" Type="Self.Ciudad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Ciudad">
+              <PropertyRef Name="idCiudad" />
+            </Principal>
+            <Dependent Role="Ciudad1">
+              <PropertyRef Name="idCiudad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DinastiaModelStoreContainer">
+          <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departamentos" EntityType="Self.Departamentos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Ciudad_Ciudad" Association="Self.FK_Ciudad_Ciudad">
+            <End Role="Ciudad" EntitySet="Ciudad" />
+            <End Role="Ciudad1" EntitySet="Ciudad" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DinastiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ciudad">
+          <Key>
+            <PropertyRef Name="idCiudad" />
+          </Key>
+          <Property Name="idCiudad" Type="Int32" Nullable="false" />
+          <Property Name="idDepartamento" Type="Int32" />
+          <Property Name="Ciudad1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Ciudad11" Relationship="Self.FK_Ciudad_Ciudad" FromRole="Ciudad" ToRole="Ciudad1" />
+          <NavigationProperty Name="Ciudad2" Relationship="Self.FK_Ciudad_Ciudad" FromRole="Ciudad1" ToRole="Ciudad" />
+        </EntityType>
+        <EntityType Name="Departamentos">
+          <Key>
+            <PropertyRef Name="idDepartamento" />
+          </Key>
+          <Property Name="idDepartamento" Type="Int32" Nullable="false" />
+          <Property Name="Departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="Identificacion" />
@@ -41,15 +91,50 @@
           <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DinastiaEntities1" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_Ciudad_Ciudad">
+          <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+          <End Role="Ciudad1" Type="Self.Ciudad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Ciudad">
+              <PropertyRef Name="idCiudad" />
+            </Principal>
+            <Dependent Role="Ciudad1">
+              <PropertyRef Name="idCiudad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DinastiaEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
+          <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK_Ciudad_Ciudad" Association="Self.FK_Ciudad_Ciudad">
+            <End Role="Ciudad" EntitySet="Ciudad" />
+            <End Role="Ciudad1" EntitySet="Ciudad" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities1">
+        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities2">
+          <EntitySetMapping Name="Ciudad">
+            <EntityTypeMapping TypeName="DinastiaModel.Ciudad">
+              <MappingFragment StoreEntitySet="Ciudad">
+                <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+                <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+                <ScalarProperty Name="Ciudad1" ColumnName="Ciudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departamentos">
+            <EntityTypeMapping TypeName="DinastiaModel.Departamentos">
+              <MappingFragment StoreEntitySet="Departamentos">
+                <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Usuarios">
             <EntityTypeMapping TypeName="DinastiaModel.Usuarios">
               <MappingFragment StoreEntitySet="Usuarios">
