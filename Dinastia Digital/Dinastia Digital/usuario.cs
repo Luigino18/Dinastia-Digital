@@ -25,7 +25,7 @@ namespace Dinastia_Digital
         }
         private void Refrescar()
         {
-            using (DinastiaEntities2 db = new DinastiaEntities2())
+            using (DinastiaEntities3 db = new DinastiaEntities3())
             {
                 var lst = from d in db.Usuarios
                           select d;
@@ -41,7 +41,6 @@ namespace Dinastia_Digital
             }
             catch
             {
-
                 return null;
             }
 
@@ -71,7 +70,7 @@ namespace Dinastia_Digital
             int? Identificacion = GetIdentificacion();
             if (Identificacion != null)
             {
-                using (DinastiaEntities2 db = new DinastiaEntities2())
+                using (DinastiaEntities3 db = new DinastiaEntities3())
                 {
                     Usuarios oUsuarios = db.Usuarios.Find(Identificacion);
                     db.Usuarios.Remove(oUsuarios);

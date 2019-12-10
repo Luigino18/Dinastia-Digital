@@ -20,6 +20,18 @@
           <Property Name="idDepartamento" Type="int" Nullable="false" />
           <Property Name="Departamento" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Referencia" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="ValorSinIva" Type="int" Nullable="false" />
+          <Property Name="Iva" Type="int" Nullable="false" />
+          <Property Name="Total" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="Identificacion" />
@@ -49,6 +61,7 @@
         <EntityContainer Name="DinastiaModelStoreContainer">
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Ciudad_Ciudad" Association="Self.FK_Ciudad_Ciudad">
             <End Role="Ciudad" EntitySet="Ciudad" />
@@ -77,6 +90,18 @@
           <Property Name="idDepartamento" Type="Int32" Nullable="false" />
           <Property Name="Departamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Referencia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="ValorSinIva" Type="Int32" Nullable="false" />
+          <Property Name="Iva" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Usuarios">
           <Key>
             <PropertyRef Name="Identificacion" />
@@ -103,9 +128,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DinastiaEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DinastiaEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
           <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
           <AssociationSet Name="FK_Ciudad_Ciudad" Association="Self.FK_Ciudad_Ciudad">
             <End Role="Ciudad" EntitySet="Ciudad" />
@@ -117,7 +143,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities2">
+        <EntityContainerMapping StorageEntityContainer="DinastiaModelStoreContainer" CdmEntityContainer="DinastiaEntities3">
           <EntitySetMapping Name="Ciudad">
             <EntityTypeMapping TypeName="DinastiaModel.Ciudad">
               <MappingFragment StoreEntitySet="Ciudad">
@@ -132,6 +158,19 @@
               <MappingFragment StoreEntitySet="Departamentos">
                 <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
                 <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="DinastiaModel.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="ValorSinIva" ColumnName="ValorSinIva" />
+                <ScalarProperty Name="Iva" ColumnName="Iva" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

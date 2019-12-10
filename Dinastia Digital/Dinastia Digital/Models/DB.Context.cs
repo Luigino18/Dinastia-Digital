@@ -13,10 +13,10 @@ namespace Dinastia_Digital.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DinastiaEntities2 : DbContext
+    public partial class DinastiaEntities3 : DbContext
     {
-        public DinastiaEntities2()
-            : base("name=DinastiaEntities2")
+        public DinastiaEntities3()
+            : base("name=DinastiaEntities3")
         {
         }
     
@@ -27,6 +27,7 @@ namespace Dinastia_Digital.Models
     
         public virtual DbSet<Ciudad> Ciudad { get; set; }
         public virtual DbSet<Departamentos> Departamentos { get; set; }
+        public virtual DbSet<Productos> Productos { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

@@ -223,6 +223,7 @@
             this.CbDepartamento.Name = "CbDepartamento";
             this.CbDepartamento.Size = new System.Drawing.Size(165, 21);
             this.CbDepartamento.TabIndex = 19;
+            this.CbDepartamento.SelectedIndexChanged += new System.EventHandler(this.CbDepartamento_SelectedIndexChanged);
             // 
             // FrmTablas
             // 

@@ -22,5 +22,16 @@ namespace Dinastia_Digital
             Form formulario = new Usuario();
             formulario.Show();
         }
+
+        private void AdminPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Productos();
+            formulario.Show();
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.BtnProductos.TabIndex = 6;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.UseVisualStyleBackColor = true;
+            this.BtnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // BtnAfiliados
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.label5);
             this.Name = "AdminPrincipal";
             this.Text = "Administrador Principal";
+            this.Load += new System.EventHandler(this.AdminPrincipal_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

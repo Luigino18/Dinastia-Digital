@@ -94,7 +94,6 @@
     <Compile Include="AdminSecundario.Designer.cs">
       <DependentUpon>AdminSecundario.cs</DependentUpon>
     </Compile>
-    <Compile Include="conexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +119,9 @@
       <DependentUpon>DB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Departamentos.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Productos.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios.cs">
